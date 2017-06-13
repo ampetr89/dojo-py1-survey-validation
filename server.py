@@ -31,7 +31,10 @@ def process():
 	if len(comment)==0:
 		flash('Comment field is required')
 		errors += 1
-
+	elif len(comment) > 120:
+		flash('Comment should not be longer than 120 characters')
+		errors += 1
+		
 	if errors > 0:
 		return redirect('/')
 	else:
