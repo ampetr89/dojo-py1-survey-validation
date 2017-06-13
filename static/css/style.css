@@ -1,0 +1,63 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+
+header{
+	text-align: left;
+	padding: 10px;
+}
+body{
+	height: 100vh;
+	text-align: center;
+	font-family: "Droid Sans", sans-serif;
+}
+
+h1{
+	margin: 30px auto;
+}
+
+
+.container{
+	text-align: left;
+	vertical-align: middle;
+	width: 400px;
+	margin: 0 auto;
+	outline: 2px gray solid;
+	padding: 10px;
+}
+
+label, .label{
+	display: inline-block;
+	width: 40%;
+	outline: 0 red solid;
+	margin-top: 1em;
+	margin-bottom: .25em;
+}
+
+.response{
+	display: inline-block;
+	width: 50%;
+	height: 1.2em;
+	margin-left: 10%;
+	outline: 0px black solid;
+	border: 0 green solid;
+}
+form .response{
+	outline: 1px black solid;
+}
+
+textarea{
+	width: 100%;
+	margin-left: 0;
+}
+
+input[type="submit"]{
+	text-align: center;
+	margin: 10px auto;
+}
+
+#errors p{
+	color: crimson;
+}

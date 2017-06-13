@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo Survey</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}"> <!----> <!--"../static/css/style.css"-->
+	<link href='https://fonts.googleapis.com/css?family=Droid Sans' rel='stylesheet'>
+</head>
+<body>
+
+	<h1>New User Entry</h1>
+	{% with messages = get_flashed_messages() %}
+	    {% if messages %}
+	    <div id="errors">
+	    <h3>Errors found in form!</h3>
+	      {% for message in messages %}
+	        <p>{{message}}</p>
+	      {% endfor %}
+	     </div>
+	    {% endif %}
+  	{% endwith %}
+	<form action='/process' method="POST" class="container">
+		
+		<label for="name">Your Name:</label><input type="text" name='name' class="response">
+
+		<label for="location">Dojo Location:</label><select name='location' class="response">
+			<option disabled selected value>Select a Location</option>
+			<option value="sj">{{sj}}</option>
+			<option value="dc">{{dc}}</option>
+			<option value="chi">{{chi}}</option>
+		</select>
+	
+		<label for="lang">Favorite Language:</label><select name='lang' class="response">
+			<option disabled selected value>Select a Language </option>
+			<option value="py">{{py}}</option>
+			<option value="js">{{js}}</option>
+			<option value="sql">{{sql}}</option>
+		</select>
+	
+		<label for="comment">Comment (optional):</label>
+		<textarea name="comment" rows=5 placeholder="Leave a comment"></textarea></td>
+		
+
+		<input type="submit" value="Submit">
+	</form>
+	
+</body>
+</html>

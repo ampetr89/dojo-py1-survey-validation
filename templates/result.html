@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey result</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}"> <!----> <!--"../static/css/style.css"-->
+	<link href='https://fonts.googleapis.com/css?family=Droid Sans' rel='stylesheet'>
+</head>
+<header>
+	<a href="/">&larr; Return to Home Screen</a>
+</header>
+<body>
+	<h1>Submitted Info</h1>
+	<div class="container">
+		<span class="label">Name:</span><span class="response">{{name}}</span>
+		<span class="label">Dojo Location:</span><span class="response">{{location}}</span>
+		<span class="label">Favorite Language:</span><span class="response">{{lang}}</span>
+		<span class="label">Comment:</span><span class="response">{{comment}}</span>
+	</div>
+</body>
+<footer>
+	
+</footer>
+</html>
